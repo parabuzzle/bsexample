@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: test-api
+  description: I make testing an api 
+spec:
+  type: openapi
+  lifecycle: production
+  owner: platform-tech
+  system: demo-system
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: TestAPI
+      license:
+        name: MIT
+    servers:
+      - url: http://tests.tradeweb.com/v1
+    paths:
+      /hello:
+        get:
+          summary: Hello world
